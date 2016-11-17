@@ -2,6 +2,8 @@
 # Gephi and Social Network Basic Analysis
 ##### Behavior Dynamics in Social Networks 2016
 
+**PS.:** Excited about Github? You can see the project for this assignment at https://github.com/ericinlinux/BDiSN_Assignment_5
+
 This assignment is divided in 3 parts. The idea is to teach how to work with Gephi, a Social Analysis software, and also to do some data mining in Twitter.
 
 ## Part A: Introduction to Gephi
