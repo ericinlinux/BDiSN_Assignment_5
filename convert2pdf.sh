@@ -1,1 +1,1 @@
-pandoc Assignment5.md -o Assignment5.pdf
+pandoc README.md -o Assignment5.pdf
