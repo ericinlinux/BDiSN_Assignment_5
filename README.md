@@ -32,7 +32,9 @@ When you open Gephi it should be possible to see this data sets:
 
 Before we begin with the practical assignment below, it is necessary become acquainted with the Gephi environment. This leads us to step 1.
 
-**Step 1:** Go through the quick start tutorial: https://gephi.org/users/quick-start/. The network for this tutorial ‘LesMiserables.gefx’ can also be downloaded from blackboard.
+**Step 1:** Go through the quick start tutorial: https://gephi.org/users/quick-start/  
+
+The network for this tutorial ‘LesMiserables.gefx’ can also be downloaded from blackboard.
 
 
 
@@ -172,6 +174,7 @@ Possibly your output will look similar to figure 3.
 This part of the assignment should be done using the Jupyter interface, through Anaconda development software. This software will allow you to use Python codes in a web interface, helping you to visualize your results and replicate others' easily.
 
 **Step 1:** Download the Anaconda from the website https://www.continuum.io/downloads. Hopefully it will show the platform of your PC.
+
 ![fig3](./figs/anaconda/Pic1.png)
 
 The next screens are for Windows platform (from the lab where you are seated).
@@ -205,7 +208,7 @@ The next screens are for Windows platform (from the lab where you are seated).
 
 ![Pic14](./figs/anaconda/Pic14.png)
 
-Good! You are ready to start. You can create a new Notebook, but we are gonna use my own notebook. So go to BB and download the file social_media.ipynb and download it at your computer.
+Good! You are ready to start. You can create a new Notebook, but we are gonna use my own notebook. So go to BB and download the file Part_C.zip and download it at your computer. There you can find the file Assignment5_Part_C.ipynb.
 
 **Step 8:** open the ipynb file using Jupyter interface, and have fun!
 
