@@ -152,41 +152,55 @@ Probably your output will look similar to figure 2.
 
 ## Part B: Facebook network
 
-For this second part we will be doing similar calculations as in assignment 1. For specific calculation steps you can look at the step descriptions in part A.
+For this second part you will be doing similar calculations as in assignment 1 in a larger data set. For specific calculation steps you can look at the step descriptions in part A.
 
 **Step 1:** Download and open the dataset file ‘ExampleFacebook.gml’ in Gephi. Open the file as a directed network when asked.
 
 ##### Question 1:
-1. How many nodes are in this network?
-2. How many relations are in this network?
-3. What is the average degree?
-4. Which person has the most connections / degrees?
-5. Who is the most influential person in the network according to Betweenness centrality calculation?
+a. How many nodes are in this network? How many relations are in this network?
+b. What is the average degree? Which person has the most connections / degrees?
+c. Who is the most influential person in the network according to Betweenness centrality calculation?
+d. How would you rank people if you were trying to target a part of the network for advertisement of a new device for health lifestyle? Who would be the best candidates? Elaborate about your strategy.
+e. Imagine we have the information about the exchange of messages between all the nodes in the networks. How can we use this information to access the strength of the connections? How this information would change your marketing strategy in question 1d?
+
+---- 
 
 **Step 2:** Turn on the labels for each node and adjust the size of the labels to your liking.
 
 **Step 3:** Apply a node ranking calculation that calculates the size for each node related to the Betweenness centrality for each node.
 
+--- 
+
 Now we introduce a method which extracts the community structure of large networks. It is a heuristic method based on modularity optimization. For more information about this method, see Blondel, Guillaume, Lambiotte & Leferbvre (2008).
 
 **Step 4:** Click on the calculation option ‘Modularity’ under ‘Statistics’, with the options ‘Randomize’ on and with resolution ‘1.0’.
 
-##### Question 2:
-1. How many communities are in this network?
-2. How big is the largest community (how many nodes)?
-
 **Step 5:** Apply a node partition calculation that attributes the color for each community to each node.
+
+
+
+
+
+##### Question 2:
+a. How many communities are in this network?
+b. How big is the largest community (how many nodes)?
+c. Consider you are doing a study about spread of opinions about some TV show competition on Facebook. You know that people are sharing their opinions and reacting to others' opinions. How would you analyse this data set considering that there are communities not connected? How would you evaluate the spread of opinions using a data set like this one.
+
+----
 
 **Step 6:** Play with the ‘Force atlas’ layout algorithm until you find a suitable graphical layout for the network. Also play with the ‘attraction distribution’ and ‘adjust by sizes’ options.
 
 **Step 7:** Output the network to PNG format when you are pleased with the graphical representation of the network. Copy the PNG file in your document where you wrote down the answers to the questions.
 
-**Step 8:** Save the document with all our answers and graphical output and name it as follows: *bd5-lastname1-lastname2.*
+**Step 8:** Save the document with all your answers and graphical output and submit it in Canvas.
 
 Possibly your output will look similar to figure 3.
 
 ![fig3](./figs/fig3.png)
 *Fig 3:*  Facebook network
+
+
+
 
 ## Part C: Gathering data from social media
 This part of the assignment should be done using the Jupyter interface, through Anaconda development software. This software will allow you to use Python codes in a web interface, helping you to visualize your results and replicate others' easily.
