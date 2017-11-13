@@ -1,8 +1,9 @@
-# Practical Assignment 5:
-# Gephi and Social Network Basic Analysis
-##### Behavior Dynamics in Social Networks 2016
+## Practical Assignment 5: Gephi and Social Network Basic Analysis
+##### Behavior Dynamics in Social Networks 2017
 
-**PS.:** Excited about Github? You can see the project for this assignment at https://github.com/ericinlinux/BDiSN_Assignment_5
+**PS.:** Do you use Github? You can get this assignment from https://github.com/ericinlinux/BDiSN_Assignment_5
+
+---
 
 This assignment is divided in 3 parts. The idea is to teach how to work with Gephi, a Social Analysis software, and also to do some data mining in Twitter.
 
@@ -68,7 +69,7 @@ As you can see the graphical representation of the network needs some work. Firs
 
 **Step 4:** Click on the ‘Show node labels’ option at the bottom of the screen and adjust the size with the ‘Font size scale’ so that it looks in proportion.
 
-![Lables](./figs/2017_Labels.png)
+![fig2](./figs/2017_Labels.png)
 *Fig 2:*  Tools to show labels and change their size.
 -----
 
@@ -103,41 +104,45 @@ Now, we want to know how many, and which nodes, clusters of nodes, or components
 
 **Step 7:** Run the ‘Connected Components’ option under the ‘Statistics’ tab.
 
-##### Question 3:
-* How many strongly connected components (or subgraphs) are found?
-
 The connected components can be graphically represented in the network, which will be our next step.
 
 **Step 8:** Under the ‘Partition’ tab, choose the ‘Nodes’ option. Select the refresh option so the connected component analysis becomes available in the selection menu next to it. Select the ‘Strongly-Connected ID’ from the selection menu. Now click ‘apply’.
 
 **Remark:** By right-clicking near the colors of the different components, it is possible to randomize colors, if you want to change them. Also you can click on each color to select specific colors for each component.
 
+##### Question 3:
+a. How many strongly connected components (or subgraphs) are found?
+b. There is only one weakly connected component. Can you elaborate on the reason why there is only one?
+c. Looking at the colors of the nodes, is that possible to identify isolated nodes in the network? Are they different from what you got in the previous question?
+d. Is that possible to identify important nodes that can play a very influencial role in the network using the colors of the components? Elaborate on how to do that.
+
+----
+
 Now we would like to introduce the notion of centrality of nodes within a network. There are various types of measures of the centrality of a node that determines the relative importance of a node in the network. In the current network the centrality of the node would represent the popularity or influentially of the girl within the group. Various methods of calculating the centrality include:
 
-* **Degree centrality:** where the number of edges a node has determines the centrality value;
-* **Closeness centrality:** where the sum of the shortest paths of node s to all other nodes
-determines the closeness centrality value;
-* **Betweenness centrality:** where vertices that have a high probability to occur on a randomly chosen shortest path between two randomly chosen nodes have a high betweenness centrality; and
-* **Eigenvector centrality:** where relative scores are assigned to all nodes in the network based on the concept that connections to high-scoring nodes contribute more to the score of the specific node than equal connections to low-scoring nodes.
+* **Degree centrality:** the number of edges a node has determines the centrality value;
+* **Closeness centrality:** the sum of the shortest paths of node s to all other nodes determines the closeness centrality value;
+* **Betweenness centrality:** vertices that have a high probability to occur on a randomly chosen shortest path between two randomly chosen nodes have a high betweenness centrality; and
+* **Eigenvector centrality:** relative scores are assigned to all nodes in the network based on the concept that connections to high-scoring nodes contribute more to the score of the specific node than equal connections to low-scoring nodes.
 
-For this assignment we will be using the betweenness centrality measure for determining the sizes of the nodes. This leads us to the next step.
+For this assignment we will use the **betweenness centrality measure** for determining the sizes of the nodes. This leads us to the next step.
 
 **Step 9:** Run the ‘Avg. Path Length’ option under the ‘Statistics’ tab. When asked choose the ‘Directed’ option and leave the ‘Normalize Centralities in [0,1]’ option unchecked. Within this calculation the Betweenness Centrality, Closeness Centrality and the Eccentricity are calculated.
 
-##### Question 4:
-* Who has the highest betweenness centrality value, and what is this value?
-
-**Step 10:** Under the ‘Ranking’ tab, choose ‘Nodes’ and choose the size/weight option. Choose
-‘Betweenness Centrality’ from the selection menu. After setting the minimum size to 2 and the
-maximum size to 10, click ‘Apply’.
+**Step 10:** Under the ‘Ranking’ tab, choose ‘Nodes’ and choose the size/weight option. Choose ‘Betweenness Centrality’ from the selection menu. After setting the minimum size to 2 and the maximum size to 10, click ‘Apply’.
 
 **Remark:** Earlier we used the In-Degree values to determine the size of the nodes, and now we let the Betweenness Centrality value to determine the nodes. Mind the changes of the size of some of the nodes, that became bigger or smaller after step 9. If you did not see the changes, you can reselect In-Degree and click ‘Apply’ again, to see them. Do not forget to select Betweenness Centrality as rank afterwards.
 
-##### Question 5:
-* Can you explain the changes in size of the nodes between the In-Degree measure and the Betweenness Centrality measure?
+##### Question 4:
+a. Who has the highest betweenness centrality value, and what is this value?
+b. Can you explain the changes in size of the nodes between the In-Degree measure and the Betweenness Centrality measure?
+c. If you aim to find influential people in the network, who would you 
+d. If you aim to find isolated people in the network, who would you consider chosing based on the centrality?consider chosing based on the centrality?
+e. Elaborate about your choices using the different metrics for isolated nodes and for influential people in the network and propose a good method to identify them based on the metrics studied here. Which metric is the most important in your opinion? Is there a way to combine different metrics to find this nodes? How would you do that?
 
-Finally, we want to output the network in PNG format. If you want to learn more about layout and visualization options, you can look at https://gephi.org/users/tutorial-layouts/ and
-https://gephi.org/users/tutorial-visualization/.
+----
+
+Finally, we want to output the network in PNG format. If you want to learn more about layout and visualization options, you can look at the [Tutorial about Layouts](https://gephi.org/users/tutorial-layouts/) and the [Tutorial about visualization](https://gephi.org/users/tutorial-visualization/).
 
 **Step 11:** Click on the ‘Preview’ tab at the top of the screen. Choose the ‘Show Labels option’ under ‘Node Labels’. Under ‘Node Labels’ you can also adjust the font, and font-size. Unclick the proportional size, to unrelate the size of the nodes with size of the labels. Click ‘export: SVG/PDF/PNG’, give the output file a name and choose PNG as output format. Copy the PNG file in your document where you wrote down the answers to the questions.
 Probably your output will look similar to figure 2.
