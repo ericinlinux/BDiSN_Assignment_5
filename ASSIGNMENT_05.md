@@ -1,7 +1,7 @@
 ## Practical Assignment 5: Gephi and Social Network Basic Analysis
 ##### Behavior Dynamics in Social Networks 2017
 
-**PS.:** Do you use Github? You can get this assignment from https://github.com/ericinlinux/BDiSN_Assignment_5
+**PS.:** Do you use Github? You can get this assignment from [the repository](https://github.com/ericinlinux/BDiSN_Assignment_5).
 
 ---
 
