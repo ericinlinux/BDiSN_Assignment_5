@@ -180,7 +180,7 @@ Now we introduce a method which extracts the community structure of large networ
 ##### Question 2:
 a. How many communities are in this network?
 b. How big is the largest community (how many nodes)?
-c. Consider you are doing a study about spread of opinions about some TV show competition on Facebook. You know that people are sharing their opinions and reacting to others' opinions. How would you analyse this data set considering that there are communities not connected? How would you evaluate the spread of opinions using a data set like this one.
+c. Consider you are doing a study about spread of opinions about some TV show competition on Facebook. You have 4 candidates to win the show, and is willing to understand how the opinion about the candidates and their support evolves in a web media based data set. You can collect what people are sharing and the reactions to others' opinions. How could you analyse this data set considering that there are communities not connected but interacting at the same time? How would you evaluate the spread of opinions using a data set like this one?
 
 ----
 
@@ -202,8 +202,7 @@ Possibly your output will look similar to figure 3.
 ## References
 
 * Blondel, V. Guillaume, J., Lambiotte, R., Lefebvre, E. Fast unfolding of communities in large networks, in Journal of Statistical Mechanics: Theory and Experiment 2008 (10), P1000
-* De Nooy, W., Mrvar, A., Batagelj, V., & Granovetter, M. (Series Editor), Exploratory Social
-Network Analysis with Pajek (Structural Analysis in the Social Sciences), Cambridge University Press 2005 (ISBN 0-521-60262-9). ESNA in Japanese, TDU, 2010
+* De Nooy, W., Mrvar, A., Batagelj, V., & Granovetter, M. (Series Editor), Exploratory Social Network Analysis with Pajek (Structural Analysis in the Social Sciences), Cambridge University Press 2005 (ISBN 0-521-60262-9). ESNA in Japanese, TDU, 2010
 * Gephi datasets from: Adamic, L. Social Network Analysis, University of Michigan.
 * Moreno, The sociometry reader, 1960
 * Tarjan, R., Depth-First Search and Linear Graph Algorithms, in SIAM Journal on Computing 1 (2): 146–160 (1972)
