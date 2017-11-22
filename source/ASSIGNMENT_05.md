@@ -21,6 +21,8 @@ The entire data set is found together with the assignment.
 * **Required:** [Java Runtime Environment - http://www.java.com/nl/download/index.jsp](http://www.java.com/nl/download/index.jsp)
 * **Remark:** update your Gephi when requested.
 
+*Some students were having problems to make Gephi work. If your system is saying that Java 1.8 is not installed, and you've installed it, just find the file where it is installed (usually inside the Program Files folder) and go to the gephi/etc/gephi.conf file on your computer and set the path for the jdkhome to the folde where your Java is installed.*
+
 ##### Gephi Tutorials
 
 * [Quick Start Tutorial - https://gephi.org/users/quick-start/](https://gephi.org/users/quick-start/)
@@ -35,9 +37,15 @@ When you open Gephi it should be possible to see this data sets:
 
 Before we begin with the practical assignment below, it is necessary become acquainted with the Gephi environment. This leads us to step 1.
 
+![fig1](./figs/fig_girls.png)
+*Fig 1:*  Girls’ school dormitory dining-table partners, 1st (pink) and 2nd (green) choices (Moreno, The sociometry reader, 1960).
+
+
 **Step 1:** Go through the quick start tutorial: [https://gephi.org/users/quick-start/](https://gephi.org/users/quick-start/)
 
 The network for this tutorial ‘*LesMiserables.gefx*’ can also be downloaded from Canvas.
+
+Ps.: It seems that the tutorial provided by Gephi is not updated to the newest version. Feel free to skip steps that are not related due to changes in the interface of the software.
 
 ----
 
@@ -45,19 +53,21 @@ The network for this tutorial ‘*LesMiserables.gefx*’ can also be downloaded 
 
 Now we are going to look at the network we will use for this practical assignment.
 
-![fig1](./figs/fig1a.png)
-*Fig 1:*  Girls’ school dormitory dining-table partners, 1st and 2nd choices (Moreno, The sociometry reader, 1960).
+
 
 <!--
 <div style="text-align:center"><img src ="./figs/fig1a.png" />*Fig 1:*  Girls’ school dormitory dining-table partners, 1st and 2nd choices (Moreno, The sociometry reader, 1960).</div>
 -->
 
 
-The network in figure 1 shows an example of sociometric research. It depicts the choices of twenty-six girls living in one *cottage* (dormitory) at a New York state training school. The girls were asked to choose the girls they liked best as their dining-table partners. First and second choices are selected only.
+The network in figure 1 shows an example of sociometric research. It depicts the choices of twenty-six girls living in one *cottage* (dormitory) at a New York state training school. The girls were asked to choose the ones they liked the best as their dining-table partners. First and second choices are selected only.
 
-In this sociogram, each girl in the dormitory is represented by a circle. For the sake of identification, the girls’ names are written next to the circles. Each arc (arrow) represents a choice. The girl who chooses a peer as a dining-table companion sends an arc toward her. Irene (in the bottom right of the figure), for instance, chose Hilda as her favorite dining-table partner and Ellen as her second choice, as indicated by the numbers labeling each arrow. (de Nooy, Mrvar, Batagelj, & Granovetter, 2012).
+In this sociogram, each girl in the dormitory is represented by a circle. For the sake of identification, the girls’ names are written next to the circles. Each arc (arrow) represents a choice. The girl who chooses a peer as a dining-table companion sends an arc toward her. Irene (in the bottom right of the figure), for instance, chose Hilda (pink arrow) as her favorite dining-table partner and Ellen (green arrow) as her second choice, as indicated by the colors of each arrow (de Nooy, Mrvar, Batagelj, & Granovetter, 2012).
+
 
 Now that you know the concepts nodes (or vertices, sites, actors), degrees and lines (or edges, arces, links, bonds, ties, relations), we will look at some basic analysis and representation options for the network.
+
+
 
 **Step 2:** Download and open the dataset file ‘DiningTablePartners.gephi’ in Gephi. Open the file as a directed network when asked.
 
@@ -71,6 +81,7 @@ As you can see the graphical representation of the network needs some work. Firs
 
 ![fig2](./figs/2017_Labels.png)
 *Fig 2:*  Tools to show labels and change their size.
+
 -----
 
 Because this is a directed graph, we can calculate the Degree, In-Degree and Out-Degree values.
@@ -82,17 +93,17 @@ Because this is a directed graph, we can calculate the Degree, In-Degree and Out
 
 ##### Question 1:
 
-a. Give the average degree value and comment why this is a logical value?
-b. Given the In-Degree distribution, how many have the highest value, and what is this value?
-c. What does the In-Degree value mean in the context of this network?
+a. Give the average out-degree value and comment why this is a logical value?
+b. Given the in-degree distribution, how many girls have the highest value, and what is this value?
+c. What does the in-degree value mean in the context of this network?
 d. Who is the most isolated person in the group? How did you define isolation using the degrees?
 e. If we want to help the girls to change their routine and be more active, we need to know who are the most important nodes in the network, and try to make sure that these people are being affected by some sort of health lifestyle program. Who would you pick from this group? Explain the reasons and argue in favor of your choice(s).
 
 -----
 
-Now we want to give the nodes different sizes corresponding to their In-Degree value.
+Now we want to give the nodes different sizes corresponding to their in-degree values.
 
-**Step 6:** Under the ‘Ranking’ tab, under ‘Nodes’, select In-Degree as input. Next the ‘Nodes’ tab you can select four ways to display the input in the network, which are by color, by size/weight, by label color, and by label size. Select the size/weight option. For minimum size we select 2 and for maximum size we choose 10. Then click ‘Apply’.
+**Step 6:** Under the ‘Ranking’ tab, under ‘Nodes’, select In-Degree as input. Next to the ‘Nodes’ tab you can select four ways to display the input in the network, which are by color, by size/weight, by label color, and by label size. Select the size/weight option. For minimum size we select 2 and for maximum size we choose 10. Then click ‘Apply’.
 
 ##### Question 2:
 a. Does this representation helps you to find who are the most isolated or popular nodes?
@@ -101,6 +112,8 @@ b. Which other metrics would you use to define the position of a person in a net
 ----
 
 Now, we want to know how many, and which nodes, clusters of nodes, or components, in the directed network are **strongly connected**. A directed network is strongly connected if there is a path from each node in the graph to every other node, specifically a path in each direction, a path from *a* to *b* and a path from *b* to *a*. Identifying strongly connected components gives an idea about how information might flow. E.g. if someone had some piece of gossip, how would this information spread? For calculating the connected components, Gephi uses a depth-first search algorithm written by Robert Tarjan (1972).
+
+The **weakly connected components** are the set of nodes that have a path from each node to the others in a "relaxed" set up of the network. The relaxed condition is basically found ignoring the direction of the arrows, and treating all connections as bidirectional. Then the same is calculated as before: if there is a path from each node in the graph to every other node, specifically a path in each direction, a path from *a* to *b* and a path from *b* to *a* then we have a weakly connected component.
 
 **Step 7:** Run the ‘Connected Components’ option under the ‘Statistics’ tab.
 
@@ -118,7 +131,7 @@ d. Is that possible to identify important nodes that can play a very influencial
 
 ----
 
-Now we would like to introduce the notion of centrality of nodes within a network. There are various types of measures of the centrality of a node that determines the relative importance of a node in the network. In the current network the centrality of the node would represent the popularity or influentially of the girl within the group. Various methods of calculating the centrality include:
+Now we would like to introduce the notion of centrality of nodes within a network. There are various types of measures of the centrality of a node that determines the relative importance of a node in the network. In the current network the centrality of the node would represent the popularity of the girl within the group. Various methods of calculating the centrality include:
 
 * **Degree centrality:** the number of edges a node has determines the centrality value;
 * **Closeness centrality:** the sum of the shortest paths of node s to all other nodes determines the closeness centrality value;
@@ -136,8 +149,8 @@ For this assignment we will use the **betweenness centrality measure** for deter
 ##### Question 4:
 a. Who has the highest betweenness centrality value, and what is this value?
 b. Can you explain the changes in size of the nodes between the In-Degree measure and the Betweenness Centrality measure?
-c. If you aim to find influential people in the network, who would you 
-d. If you aim to find isolated people in the network, who would you consider chosing based on the centrality?consider chosing based on the centrality?
+c. If you aim to find influential people in the network, who would you consider chosing based on the centrality?
+d. If you aim to find isolated people in the network, who would you consider chosing based on the centrality? 
 e. Elaborate about your choices using the different metrics for isolated nodes and for influential people in the network and propose a good method to identify them based on the metrics studied here. Which metric is the most important in your opinion? Is there a way to combine different metrics to find this nodes? How would you do that?
 
 ----
@@ -154,7 +167,7 @@ Probably your output will look similar to figure 2.
 
 For this second part you will be doing similar calculations as in assignment 1 in a larger data set. For specific calculation steps you can look at the step descriptions in part A.
 
-**Step 1:** Download and open the dataset file ‘ExampleFacebook.gml’ in Gephi. Open the file as a directed network when asked.
+**Step 1:** Download and open the dataset file ‘ExampleFacebook.gml’ in Gephi. Open the file as a directed (or mixed, if directed is not available) network when asked.
 
 ##### Question 1:
 a. How many nodes are in this network? How many relations are in this network?
